@@ -1,0 +1,13 @@
+version: '3.0'
+services:
+  harar:
+    build: 
+      dockerfile: ./Dockerfile
+    environment:
+      - TZ=Europe/Amsterdam
+    ports:
+      - "3040:80"
+    restart: unless-stopped
+    volumes:
+      - ./Docker:/app/Settings
+    
